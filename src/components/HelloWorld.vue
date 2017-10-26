@@ -10,6 +10,7 @@
           <span class="dotColor"> • </span>
           <span>&nbsp;</span>
           <span class="instance">{{name}}</span><span>&nbsp;</span>
+          <span>&nbsp;</span>
           <span class="dotColor"> • </span>
           <span>&nbsp;</span>
           <span class="instance">{{titel}}<span>&nbsp;</span></span>
