@@ -1,7 +1,7 @@
 <template lang='html'>
   <div class="container">
       <div class="guide">
-        <a href="https://www.fullystudios.se">
+        <a href="https://linderoths.se/">
           <img alt="Fully Studios" class="logo" src="https://linderoths.se/wp-content/uploads/2016/12/linderoths_logo.png"/>
         </a>
       </div>
@@ -9,11 +9,11 @@
         <p class="guide" v-if="name || titel || businessArea">
           <span class="dotColor"> • </span>
           <span>&nbsp;</span>
-          <span class="instance">{{name}}</span><span>&nbsp;</span>
+          <span class="instance">{{name}}</span>
           <span>&nbsp;</span>
           <span class="dotColor"> • </span>
           <span>&nbsp;</span>
-          <span class="instance">{{titel}}<span>&nbsp;</span></span>
+          <span class="instance">{{titel}}</span>
           <span>&nbsp;</span>
           <span class="instance">{{businessArea}}</span>
         </p>
@@ -35,17 +35,17 @@
           <span>&nbsp;</span>
           <span v-if="local" class="instance" >{{ local }}</span>
           <span>&nbsp;</span>
-          <span v-if="street" class="dotColor"> • </span>
+          <span v-if="street" class="dotColor">•</span>
           <span>&nbsp;</span>
           <span v-if="street" class="instance" >{{ street }}</span>
           <span>&nbsp;</span>
-          <span v-if="postNumber" class="dotColor"> • </span>
+          <span v-if="postNumber" class="dotColor">•</span>
           <span>&nbsp;</span>
           <span v-if="postNumber" class="instance">{{ postNumber }}</span>
           <span>&nbsp;</span>
           <span v-if="city" class="instance">{{ city }}</span>
         </div>
-        &nbsp;<span style="color: #FFC1B4"></span>&nbsp;
+
          </div>
 
     <div class="form">
@@ -57,27 +57,27 @@
       </div>
       <div class="form-group">
         <div class="label guideFont">
-          <label for="formGroupExampleInput2">Work title:</label>
+          <label for="formGroupExampleInput2">Work Title:</label>
         </div>
-        <input type="text" v-model="titel" v-on:keyup="setTitel" class="form-control" id="" placeholder="Title">
+        <input type="text" v-model="titel" v-on:keyup="setTitel" class="form-control" id="" placeholder="Work Title">
       </div>
       <div class="form-group">
-        <div class="label">
-           <label for="formGroupExampleInput">Business area:</label>
+        <div class="label guideFont">
+           <label for="formGroupExampleInput">Business Area:</label>
         </div>
         <input type="text" v-model="businessArea" class="form-control" v-on:keyup="setBusinessArea" id="formGroupExampleInput" placeholder="Business Area">
       </div>
       <div class="form-group">
         <div class="label guideFont">
-           <label for="formGroupExampleInput">Phone number:</label>
+           <label for="formGroupExampleInput">Phone Number:</label>
         </div>
-        <input type="text" v-model="phone" class="form-control" id="formGroupExampleInput" v-on:keyup="setPhone" placeholder="+46 525 XX XX XX">
+        <input type="text" v-model="phone" class="form-control" id="formGroupExampleInput" v-on:keyup="setPhone" placeholder="076 525 XXXX">
       </div>
       <div class="form-group">
         <div class="label guideFont">
-           <label for="formGroupExampleInput">HomePage:</label>
+           <label for="formGroupExampleInput">Home Page:</label>
         </div>
-        <input v-model="homepage" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setHomepage" placeholder="www.linderoths.se">
+        <input v-model="homepage" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setHomepage" placeholder="linderoths.se">
       </div>
       <div class="form-group">
         <div class="label guideFont">
@@ -99,7 +99,7 @@
       </div>
       <div class="form-group">
         <div class="label guideFont">
-             <label for="formGroupExampleInput">Post number:</label>
+             <label for="formGroupExampleInput">Post Number:</label>
         </div>
         <input v-model="postNumber" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setPostNumber" placeholder="Post Number">
       </div>
@@ -110,7 +110,7 @@
         <input v-model="city" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setCity" placeholder="City">
       </div>
     </div>
-    <div class="card guideFont">
+    <div class="card guideFont guidecard">
       <div class="card-block guide">
         <h2 class="card-title guideColor">Guide:</h2>
       </div>
