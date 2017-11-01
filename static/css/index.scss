@@ -10,8 +10,6 @@
 }
 .guide{
   @extend .flex;
-  font-family: 'Andale Mono', monospace;
-  font-size: 11px;
 }
 .guideFont{
   font-family: 'Slabo 27px', serif;
@@ -23,22 +21,9 @@
 .label{
   @extend .flex;
 }
-.logo{
-  height: 1.8em;
-  width: 11em;
-  margin-bottom: 2%;
-}
-.dotColor{
-  color: #FC5961;
-  // margin-right: 5%;
-}
-.instance{
-  color: #01215a;
-  // margin-right: 5%;
-}
-.textInfo{
-   margin-top: 4%;
-}
+// .textInfo{
+//    margin-top: 4%;
+// }
 .guideColor{
   color: #20B2AA;
 }
@@ -50,6 +35,9 @@
   margin-top: 13%;
   margin-bottom: 5%;
 }
+// .nameMargin{
+//   margin-bottom: 1em!important;
+// }
 @media screen and (min-width: 855px) {
     .container {
       width:50%;

@@ -2,55 +2,57 @@
   <div class="container">
       <div class="guide">
         <a href="https://linderoths.se/">
-          <img alt="Fully Studios" class="logo" src="https://linderoths.se/wp-content/uploads/2016/12/linderoths_logo.png"/>
+          <img alt="Linderoths" class="logo" width="120.99" height="19.787" style="margin-bottom: 2%;" src="https://linderoths.se/wp-content/uploads/2016/12/linderoths_logo.png"/>
         </a>
       </div>
-      <div class="textInfo" >
-        <p class="guide" v-if="name || titel || businessArea">
-          <span class="dotColor"> • </span>
+      <div  style=" margin-bottom: 2em ;margin-top: 4%;">
+        <p class="guide" style="font-family: 'Andale Mono', monospace; font-size: 11px;" v-if="name || titel || businessArea">
+          <span style="color: #FC5961;"> • </span>
           <span>&nbsp;</span>
-          <span class="instance">{{name}}</span>
+          <span style="color: #01215a;">{{name}}</span>
           <span>&nbsp;</span>
-          <span class="dotColor"> • </span>
+          <span style="color: #FC5961;"> • </span>
           <span>&nbsp;</span>
-          <span class="instance">{{titel}}</span>
+          <span style="color: #01215a;">{{titel}}</span>
           <span>&nbsp;</span>
-          <span class="instance">{{businessArea}}</span>
+          <span style="color: #FC5961;"> • </span>
+          <span>&nbsp;</span>
+          <span style="color: #01215a;">{{businessArea}}</span>
+          
         </p>
         <div class="guide">
-          <span class="dotColor" v-if="phone"> • </span>
+          <span style="color: #FC5961;" v-if="phone"> • </span>
           <span>&nbsp;</span>
-          <a v-if="phone" class="instance" :href="`tel:${phone}`">{{ phone }}</a>
+          <a v-if="phone" style="color: #01215a;" :href="`tel:${phoneFormat}`">{{ phone }}</a>
           <span>&nbsp;</span>
-          <span v-if="homepage" class="dotColor"> • </span>
+          <span v-if="homepage" style="color: #FC5961;"> • </span>
           <span>&nbsp;</span>
-          <a v-if="homepage" class="dotColor"  :href="`https://${homepage}`">{{ homepage }}</a>
+          <a v-if="homepage" style="color: #FC5961;"  :href="`https://${hemsidan}`">{{ homepage }}</a>
           <span>&nbsp;</span>
-          <span v-if="social" class="dotColor"> • </span>
+          <span v-if="social" style="color: #FC5961;"> • </span>
           <span>&nbsp;</span>
-          <span v-if="social" class="instance">{{social}}</span>
-        </div>
-        <div class="guide">
-          <span v-if="local" class="dotColor"> • </span>
-          <span>&nbsp;</span>
-          <span v-if="local" class="instance" >{{ local }}</span>
-          <span>&nbsp;</span>
-          <span v-if="street" class="dotColor">•</span>
-          <span>&nbsp;</span>
-          <span v-if="street" class="instance" >{{ street }}</span>
-          <span>&nbsp;</span>
-          <span v-if="postNumber" class="dotColor">•</span>
-          <span>&nbsp;</span>
-          <span v-if="postNumber" class="instance">{{ postNumber }}</span>
-          <span>&nbsp;</span>
-          <span v-if="city" class="instance">{{ city }}</span>
-        </div>
-
+          <span v-if="social" style="color: #01215a;">{{ social }}</span>
+      </div>
+      <div class="guide">
+    <span v-if="local" style="color: #FC5961;"> • </span>
+    <span>&nbsp;</span>
+    <span v-if="local" style="color: #01215a;" >{{ local }}</span>
+    <span>&nbsp;</span>
+    <span v-if="street" style="color: #FC5961;">•</span>
+    <span>&nbsp;</span>
+    <span v-if="street" style="color: #01215a;" >{{ street }}</span>
+    <span>&nbsp;</span>
+    <span v-if="postNumber" style="color: #FC5961;">•</span>
+    <span>&nbsp;</span>
+    <span v-if="postNumber" style="color: #01215a;">{{ postNumber }}</span>
+    <span>&nbsp;</span>
+    <span v-if="city" style="color: #01215a;">{{ city }}</span>
+      </div>
          </div>
 
     <div class="form">
       <div class="form-group">
-        <div class="label guideFont">
+        <div class="label guideFont ">
           <label for="formGroupExampleInput">Name:</label>
         </div>
         <input type="text" v-model="name" v-on:keyup="setName" class="form-control" id="formGroupExampleInput" placeholder="Firstname Lastname">
@@ -71,13 +73,13 @@
         <div class="label guideFont">
            <label for="formGroupExampleInput">Phone Number:</label>
         </div>
-        <input type="text" v-model="phone" class="form-control" id="formGroupExampleInput" v-on:keyup="setPhone" placeholder="076 525 XXXX">
+        <input type="text" v-model="phone" class="form-control" id="formGroupExampleInput" v-on:keyup="setPhone" placeholder="+46 7XX XX XX XX">
       </div>
       <div class="form-group">
         <div class="label guideFont">
            <label for="formGroupExampleInput">Home Page:</label>
         </div>
-        <input v-model="homepage" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setHomepage" placeholder="linderoths.se">
+        <input v-model="homepage" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setHomepage" placeholder="https://linderoths.se">
       </div>
       <div class="form-group">
         <div class="label guideFont">
@@ -89,25 +91,25 @@
         <div class="label guideFont">
            <label for="formGroupExampleInput">Location:</label>
         </div>
-        <input v-model="local" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setLocal" placeholder="Location">
+        <input v-model="local" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setLocal" placeholder="Victoriapassagen">
       </div>
       <div class="form-group">
         <div class="label guideFont">
            <label for="formGroupExampleInput">Street:</label>
         </div>
-        <input v-model="street" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setStreet" placeholder="Street">
+        <input v-model="street" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setStreet" placeholder="Södra Larmgatan 14">
       </div>
       <div class="form-group">
         <div class="label guideFont">
              <label for="formGroupExampleInput">Post Number:</label>
         </div>
-        <input v-model="postNumber" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setPostNumber" placeholder="Post Number">
+        <input v-model="postNumber" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setPostNumber" placeholder="411 16">
       </div>
       <div class="form-group">
         <div class="label guideFont">
             <label for="formGroupExampleInput">City:</label>
         </div>
-        <input v-model="city" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setCity" placeholder="City">
+        <input v-model="city" type="text" class="form-control" id="formGroupExampleInput" v-on:keyup="setCity" placeholder="Göteborg">
       </div>
     </div>
     <div class="card guideFont guidecard">
@@ -131,16 +133,18 @@ export default {
   data () {
     return {
       // click: false,
-      name: localStorage.getItem('mail-signature_name') ? localStorage.getItem('mail-signature_name') : '',
-      titel: localStorage.getItem('mail-signature_titel') ? localStorage.getItem('mail-signature_titel') : '',
-      businessArea: localStorage.getItem('mail-signature_businessArea') ? localStorage.getItem('mail-signature_businessArea') : '',
+      name: localStorage.getItem('mail-signature_name') ? localStorage.getItem('mail-signature_name') : 'Förnamn Efternamn',
+      titel: localStorage.getItem('mail-signature_titel') ? localStorage.getItem('mail-signature_titel') : 'Yrke',
+      businessArea: localStorage.getItem('mail-signature_businessArea') ? localStorage.getItem('mail-signature_businessArea') : 'Affärsområde',
       phone: localStorage.getItem('mail-signature_phone') ? localStorage.getItem('mail-signature_phone') : '',
-      homepage: localStorage.getItem('mail-signature_homepage') ? localStorage.getItem('mail-signature_homepage') : '',
-      social: localStorage.getItem('mail-signature_social') ? localStorage.getItem('mail-signature_social') : '',
-      local: localStorage.getItem('mail-signature_local') ? localStorage.getItem('mail-signature_local') : '',
-      street: localStorage.getItem('mail-signature_street') ? localStorage.getItem('mail-signature_street') : '',
-      postNumber: localStorage.getItem('mail-signature_post') ? localStorage.getItem('mail-signature_post') : '',
-      city: localStorage.getItem('mail-signature_city') ? localStorage.getItem('mail-signature_city') : ''
+      phoneFormat: '',
+      homepage: localStorage.getItem('mail-signature_homepage') ? localStorage.getItem('mail-signature_homepage') : 'https://linderoths.se',
+      hemsidan: '',
+      social: localStorage.getItem('mail-signature_social') ? localStorage.getItem('mail-signature_social') : '@wearelinderoths',
+      local: localStorage.getItem('mail-signature_local') ? localStorage.getItem('mail-signature_local') : 'Victoriapassagen',
+      street: localStorage.getItem('mail-signature_street') ? localStorage.getItem('mail-signature_street') : 'Södra Larmgatan 14',
+      postNumber: localStorage.getItem('mail-signature_post') ? localStorage.getItem('mail-signature_post') : '411 16',
+      city: localStorage.getItem('mail-signature_city') ? localStorage.getItem('mail-signature_city') : 'Göteborg'
     }
   },
   methods: {
@@ -158,9 +162,12 @@ export default {
       localStorage.setItem('mail-signature_businessArea', this.businessArea)
     },
     setPhone () {
+      this.phoneFormat = this.phone.replace(/\s+/g, '')
       localStorage.setItem('mail-signature_phone', this.phone)
     },
     setHomepage () {
+      var url = this.homepage
+      this.hemsidan = url.replace('https://', '')
       localStorage.setItem('mail-signature_homepage', this.homepage)
     },
     setSocial () {
