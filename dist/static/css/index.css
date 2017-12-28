@@ -1,0 +1,43 @@
+.flex, .guide, .label {
+  display: flex;
+  justify-content: flex-start; }
+
+.container {
+  margin-top: -20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-image: url("../linderoth_pattern.png"); }
+
+.guide {
+  font-family: 'Andale Mono', monospace;
+  font-size: 11px; }
+
+.guideFont {
+  font-family: 'Slabo 27px', serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; }
+
+.marginToInfo {
+  margin-right: 0.5em; }
+
+.guideColor {
+  color: #20B2AA; }
+
+.guidecard {
+  margin-top: 20px;
+  margin-bottom: 15px; }
+
+@media screen and (min-width: 855px) {
+  .container {
+    width: 50vw;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    background-image: url("../linderoth_pattern.png"); }
+
+  .guidecard {
+    margin-top: 10px;
+    margin-bottom: 5px; } }
+
+/*# sourceMappingURL=index.css.map */
